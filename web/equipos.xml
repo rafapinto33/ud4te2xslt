@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="equipos.xsl"?>
+
+<!--
+Autor: Rafael Pinto Andrades
+Asignatura: LMGSI
+Unidad: UD 4
+Tarea: Tarea evaluativa 2 - XSLT
+Fecha: 2024-03-08
+El objetivo de esta tarea es utilizar el lenguaje XPath y el estandar XSLT para transformar 
+un sitio web de manera que obtenga los datos visualizados de un documento XML que representa 
+información sobre las secciones de un Club de voleibol.
+-->
+
+<club_voleibol>
+
+    <!-- Información de la tienda -->
+    <tienda ubicacion="Bilbao">
+        <articulo marca="Nike" foto="camiseta.jpg" cod="AB123456A">
+            <nombre>Camiseta oficial</nombre>
+            <descripcion>Camiseta oficial del club</descripcion>
+            <precio>29.99</precio>
+            <comentarios fecha="2023-07-01">Muy cómoda</comentarios>
+            <comentarios fecha="2023-05-22">Buena relación calidad precio</comentarios>
+        </articulo>
+        <articulo marca="Mizuno" foto="zapatilla.jpg" cod="AB123455A">
+            <nombre>Zapatillas mujer</nombre>
+            <descripcion>Zapatillas diseñadas para un agarre excepcional.</descripcion>
+            <precio>79.99</precio>
+            <comentarios fecha="2023-07-20">Increíble tracción, ideales para partidos intensos.</comentarios>
+        </articulo>
+        <articulo marca="Joma" foto="chaqueta.jpg" cod="AB123454A">
+            <nombre>Chaqueta hombre</nombre>
+            <descripcion>Chaqueta resistente al viento, ideal para entrenamientos al aire libre.</descripcion>
+            <precio>59.99</precio>
+            <comentarios fecha="2023-07-15">Diseño moderno y gran calidad, perfecta para climas fríos.</comentarios>
+        </articulo>   
+    </tienda>
+
+    <!-- Información del equipo -->
+    <equipo categoria="Primera">
+        <nombre>Club VolleyTeam1</nombre>
+        <entrenador>
+            <nombre>Julio Velasco</nombre>
+            <url>https://es.wikipedia.org/wiki/Julio_Velasco</url>
+        </entrenador>
+        
+        <jugadores>
+            <jugador camiseta="7" titular="si">
+                <nombre>Luis García</nombre>
+                <posicion>Atacante</posicion>
+                <nacionalidad>Argentina</nacionalidad>
+            </jugador>
+            <jugador camiseta="3" titular="no">
+                <nombre>Ana Silva</nombre>
+                <posicion>Libero</posicion>
+                <nacionalidad>Brasil</nacionalidad>
+            </jugador>
+            <jugador camiseta="12" titular="si">
+                <nombre>Silvia Ramos</nombre>
+                <posicion>Libero</posicion>
+                <nacionalidad>Chile</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+    <equipo categoria="Segunda">
+        <nombre>Club VolleyTeam2</nombre>
+        <entrenador>
+            <nombre>Julio Velasco</nombre>
+            <url>https://es.wikipedia.org/wiki/Arie_Selinger</url>
+        </entrenador>
+        
+        <jugadores>
+            <jugador camiseta="7" titular="si">
+                <nombre>Luis García</nombre>
+                <posicion>Atacante</posicion>
+                <nacionalidad>Argentina</nacionalidad>
+            </jugador>
+            <jugador camiseta="3" titular="no">
+                <nombre>Ana Silva</nombre>
+                <posicion>Libero</posicion>
+                <nacionalidad>Brasil</nacionalidad>
+            </jugador>
+            <jugador camiseta="12" titular="si">
+                <nombre>Silvia Ramos</nombre>
+                <posicion>Libero</posicion>
+                <nacionalidad>Chile</nacionalidad>
+            </jugador>
+        </jugadores>
+    </equipo>
+
+    <!-- Información del partido: No puede haber 2 elementos diferentes con el nombre "equipo" -->
+    <partido>
+        <lugar ciudad="Lima">Estadio Nacional</lugar>
+        <fecha>2023-08-01</fecha>
+        <equipos>
+            <local puntuacion="25">Equipo A</local>
+            <visitante puntuacion="20">Equipo B</visitante>
+        </equipos>
+        
+        <arbitro categoria="internacional">
+            <nombre>Juan Pérez</nombre>
+            <nacionalidad>Argentina</nacionalidad>
+        </arbitro>
+    </partido>
+    <partido>
+        <lugar ciudad="Lima">Estadio Central</lugar>
+        <fecha>2023-04-01</fecha>
+        <equipos>
+            <local puntuacion="20">Equipo B</local>
+            <visitante puntuacion="25">Equipo A</visitante>
+        </equipos>
+        
+        <arbitro categoria="internacional">
+            <nombre>Juan Pérez</nombre>
+            <nacionalidad>Argentina</nacionalidad>
+        </arbitro>
+    </partido>
+</club_voleibol>
